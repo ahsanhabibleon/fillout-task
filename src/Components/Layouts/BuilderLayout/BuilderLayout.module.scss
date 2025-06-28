@@ -1,0 +1,8 @@
+.main_layout {
+    height: 100vh;
+    overflow-x: hidden;
+    background: var(--bg-color-dark);
+    .main_layout__container {
+        padding: 50px;
+    }
+}

@@ -1,0 +1,36 @@
+:root {
+    // RGBs
+    --bg-color-dark-rgb: 68, 68, 68;
+    --bg-color-light-rgb: 249, 250, 251;
+
+    --text-color-gray--dark-rgb: 26, 26, 26;
+    --text-color-gray--light-rgb: 103, 114, 137;
+
+    --color-danger-rgb: 239, 73, 79;
+    --color-warning-rgb: 245, 157, 14;
+    --color-blue-primary-rgb: 47, 114, 226;
+
+    --color-border--light-rgb: 225, 225, 225;
+    --color-border--dashed-rgb: 192, 192, 192;
+
+    // Variables
+    --font-primary: 'Inter', sans-serif;
+    --bg-color-dark: rgba(var(--bg-color-dark-rgb), 1);
+    --bg-color-light: rgba(var(--bg-color-light-rgb), 1);
+    --bg-color-grey: #ECEEF1;
+    --bg-color-dark-grey: #D9DCE1;
+
+    --text-color-gray--dark: rgba(var(--text-color-gray--dark-rgb), 1);
+    --text-color-gray--light: rgba(var(--text-color-gray--light-rgb), 1);
+
+    --color-danger: rgba(var(--color-danger-rgb), 1);
+    --color-warning: rgba(var(--color-warning-rgb), 1);
+    --color-blue-primary: rgba(var(--color-blue-primary), 1);
+
+    --color-border--light: rgba(var(--color-border--light-rgb), 1);
+
+    --radius-m: 8px;
+    --radius-l: 12px;
+
+    --transition-default: .3s ease-in-out;
+}
