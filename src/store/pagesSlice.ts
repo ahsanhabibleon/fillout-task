@@ -5,7 +5,6 @@ import { initialState } from './static';
 export interface IPageState {
   key: string;
   label: string;
-  orderId: number;
   notDraggable?: boolean;
   isActive?: boolean;
   icon?: ReactNode;
@@ -16,15 +15,12 @@ const pagesSlice = createSlice({
   initialState,
   reducers: {
     addPage(state, action) {
-      return [
-        ...state,
-        {
-          key: `new-page-${state?.length + 1}`,
-          label: `Page ${state?.length + 1}`,
-          orderId: action.payload?.orderId || state?.length + 1,
-          icon: 'IconPageDefault',
-        },
-      ];
+      if (action?.payload?.index != null) {
+        state.splice(action?.payload?.index + 1, 0, { ...action?.payload?.item });
+
+        return state;
+      }
+      return [...state, { ...action?.payload?.item }];
     },
     orderPages(state, action) {
       return [...action.payload];

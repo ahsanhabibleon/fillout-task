@@ -4,10 +4,11 @@ import { addPage, orderPages, setActivePage, type IPageState } from '../pagesSli
 export const useGlobalDispatcher = () => {
   const dispatch = useDispatch();
 
-  const addNewPage = (item?: IPageState) => {
+  const addNewPage = (item?: IPageState, index?: number) => {
     dispatch(
       addPage({
-        orderId: item?.orderId,
+        item,
+        index,
       })
     );
   };
