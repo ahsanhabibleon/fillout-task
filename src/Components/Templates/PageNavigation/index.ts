@@ -1,3 +1,3 @@
-import PageNavigation from "./PageNavigation";
+import PageNavigation from './PageNavigation';
 
 export default PageNavigation;

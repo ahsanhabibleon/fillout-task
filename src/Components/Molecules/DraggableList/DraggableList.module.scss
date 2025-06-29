@@ -1,47 +1,45 @@
 .sortable_list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    width: fit-content;
-    align-items: center;
-    
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: fit-content;
+  align-items: center;
 
-    &:not(:last-child)::before {
-        content: ' ';
-        position: absolute;
-        left: 50px;
-        width: calc(100% - 100px);
-        border: 1px dashed rgba(var(--color-border--dashed-rgb), 1);
-        top: calc(50% - 1px);
-    }
+  &:not(:last-child)::before {
+    content: ' ';
+    position: absolute;
+    left: 50px;
+    width: calc(100% - 100px);
+    border: 1px dashed rgba(var(--color-border--dashed-rgb), 1);
+    top: calc(50% - 1px);
+  }
 }
 
-
 .sortable_list_item__add {
-    cursor: pointer;
-    background-color: #fff;
-    border-color: var(--color-border--light);
-    color: var(--text-color-gray--dark);
+  cursor: pointer;
+  background-color: #fff;
+  border-color: var(--color-border--light);
+  color: var(--text-color-gray--dark);
 }
 
 .sortable_list_item_icon_add_wrapper {
-    width: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease-in-out;
-    padding: 0;
+  width: 20px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  padding: 0;
 
-    &:hover {
-        padding: 0 15px;
-        .sortable_list_item_icon_add {
-            opacity: 1;
-        }
+  &:hover {
+    width: 40px;
+    .sortable_list_item_icon_add {
+      opacity: 1;
     }
+  }
 }
-
 
 .sortable_list_item_icon_add {
   width: 14px;
@@ -62,4 +60,46 @@
   padding: 0;
   cursor: pointer;
   margin: 0;
+}
+
+.list_of_page_types {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
+  li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 3px 5px;
+    background-color: transparent;
+    border-radius: 3px;
+    transition: background-color var(--transition-default);
+    &:hover {
+      background-color: var(--bg-color-grey);
+    }
+  }
+}
+
+.name_your_page {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+  gap: 10px;
+  input {
+    border: 1px solid var(--color-border--light);
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 3px 10px;
+    font-size: 14px;
+    line-height: 22px;
+    border-radius: 3px;
+  }
+  button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
 }

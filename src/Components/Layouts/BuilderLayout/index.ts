@@ -1,3 +1,3 @@
-import BuilderLayout from "./BuilderLayout";
+import BuilderLayout from './BuilderLayout';
 
 export default BuilderLayout;

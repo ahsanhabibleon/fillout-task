@@ -1,4 +1,4 @@
-import type { IPageState } from "./pagesSlice";
+import type { IPageState } from './pagesSlice';
 
 // src/store/sessionStorage.ts
 export const loadState = () => {
@@ -11,7 +11,7 @@ export const loadState = () => {
   }
 };
 
-export const saveState = (state: {pages: IPageState[]}) => {
+export const saveState = (state: { pages: IPageState[] }) => {
   try {
     const serializedState = JSON.stringify(state);
     sessionStorage.setItem('builderState', serializedState);

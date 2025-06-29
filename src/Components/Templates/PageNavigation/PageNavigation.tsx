@@ -6,7 +6,7 @@ const PageNavigation = () => {
     <div className={styles.page_navigation}>
       <DraggableList />
     </div>
-  )
-}
+  );
+};
 
-export default PageNavigation
+export default PageNavigation;

@@ -17,8 +17,8 @@ export const useGlobalDispatcher = () => {
     dispatch(orderPages(orderedPages));
   };
 
-  const setPageAsActive = (pageKey: string) => {
-    dispatch(setActivePage({ pageKey }));
+  const setPageAsActive = (orderId: string) => {
+    dispatch(setActivePage({ orderId }));
   };
 
   return {

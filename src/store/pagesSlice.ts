@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { ReactNode } from 'react';
-import { initialState } from './static';
+import { initialPages } from './static';
 
 export interface IPageState {
   key: string;
@@ -8,11 +8,12 @@ export interface IPageState {
   notDraggable?: boolean;
   isActive?: boolean;
   icon?: ReactNode;
+  orderId: string | number;
 }
 
 const pagesSlice = createSlice({
   name: 'pages',
-  initialState,
+  initialState: initialPages,
   reducers: {
     addPage(state, action) {
       if (action?.payload?.index != null) {
@@ -22,12 +23,12 @@ const pagesSlice = createSlice({
       }
       return [...state, { ...action?.payload?.item }];
     },
-    orderPages(state, action) {
+    orderPages(_, action) {
       return [...action.payload];
     },
     setActivePage(state, action) {
       return state?.map((page: IPageState) => {
-        if (page.key === action.payload?.pageKey) {
+        if (page.orderId === action.payload?.orderId) {
           return { ...page, isActive: true };
         } else {
           return { ...page, isActive: false };
