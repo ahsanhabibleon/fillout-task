@@ -19,6 +19,7 @@
   border: 1px solid transparent;
   z-index: 9;
   position: relative;
+  outline: none;
 
   &_icon {
     svg {
@@ -31,10 +32,25 @@
       transition: width var(--transition-default);
     }
   }
+  &:not(.sortable_list_item_active):focus {
+    border-color: var(--color-blue-primary);
+    box-shadow: 0 0 0 2px rgba(var(--color-blue-primary-rgb), .25);
+    background-color: #fff;
+    color: var(--text-color-gray--dark);
+    &:hover {
+      background-color: #fff;
+    }
+    .sortable_list_item_icon:not(.sortable_list_item_icon_active) {
+      path {
+        stroke: var(--color-warning);
+      }
+    }
+  }
   &_active {
     background-color: #fff;
     border-color: var(--color-border--light);
     color: var(--text-color-gray--dark);
+    box-shadow: none;
     filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.1));
     .sortable_list_item_icon_active {
       opacity: 1;
